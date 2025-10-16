@@ -1,9 +1,7 @@
 package com.cursee.unlocked_typing.platform;
 
-import com.cursee.unlocked_typing.UnlockedTypingForge;
 import com.cursee.unlocked_typing.platform.services.IPlatformHelper;
 import java.nio.file.Path;
-import net.minecraft.server.level.ServerPlayer;
 import net.minecraftforge.fml.ModList;
 import net.minecraftforge.fml.loading.FMLLoader;
 
@@ -37,9 +35,5 @@ public class ForgePlatformHelper implements IPlatformHelper {
   public String getGameDirectoryString() {
 
     return getGameDirectory().toString();
-  }
-
-  @Override
-  public <T> void sendToPlayer(ServerPlayer serverPlayer, T packet) {
   }
 }

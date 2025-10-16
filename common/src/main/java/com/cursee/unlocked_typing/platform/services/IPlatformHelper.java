@@ -40,6 +40,4 @@ public interface IPlatformHelper {
   Path getGameDirectory();
 
   String getGameDirectoryString();
-
-  <T> void sendToPlayer(ServerPlayer serverPlayer, T packet);
 }

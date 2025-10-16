@@ -7,7 +7,7 @@ import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 
 @Mixin(SharedConstants.class)
-public class SharedConstantsMixin {
+public class FabricSharedConstantsMixin {
 
   @Inject(at = @At("TAIL"), method = "isAllowedChatCharacter", cancellable = true)
   private static void unlocked_typing$isAllowedChatCharacter(char character, CallbackInfoReturnable<Boolean> cir) {

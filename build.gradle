@@ -1,0 +1,37 @@
+plugins {
+    id 'fabric-loom' version '1.9-SNAPSHOT' apply(false)
+    id 'net.neoforged.moddev.legacyforge' version '2.0.77' apply(false)
+
+    // The version of Forgix that is used, see https://github.com/PacifistMC/Forgix/releases for new versions
+    id "io.github.pacifistmc.forgix" version "1.2.9"
+}
+
+forgix {
+    group = "${project.group}"
+    mergedJarName = "${mod_id}-merged-${minecraft_version}-${project.version}.jar"
+    outputDir = "build/libs"
+
+    custom {
+        projectName = "common"
+        jarLocation = "build/libs/${mod_id}-common-${minecraft_version}-${project.version}.jar"
+    }
+
+    fabric {
+        projectName = "fabric"
+        jarLocation = "build/libs/${mod_id}-fabric-${minecraft_version}-${project.version}.jar"
+    }
+
+    forge {
+        projectName = "forge"
+        jarLocation = "build/libs/${mod_id}-forge-${minecraft_version}-${project.version}.jar"
+
+        mixin "${mod_id}.forge.mixins.json"
+    }
+
+//    neoforge {
+//        projectName = "neoforge"
+//        jarLocation = "build/libs/${mod_id}-neoforge-${minecraft_version}-${project.version}.jar"
+//
+//        mixin "${mod_id}.neoforge.mixins.json"
+//    }
+}

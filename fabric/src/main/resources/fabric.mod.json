@@ -16,10 +16,10 @@
     "environment": "*",
     "entrypoints": {
         "main": [
-            "com.cursee.peaceful_hunger.PeacefulHungerFabric"
+            "com.cursee.unlocked_typing.UnlockedTypingFabric"
         ],
         "client": [
-            "com.cursee.peaceful_hunger.PeacefulHungerClientFabric"
+            "com.cursee.unlocked_typing.UnlockedTypingClientFabric"
         ]
     },
     "mixins": [

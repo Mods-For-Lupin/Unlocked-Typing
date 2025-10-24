@@ -1,4 +1,4 @@
-package com.cursee.unlocked_typing.mixin;
+package com.cursee.unlocked_typing.mixinOLD;
 
 import com.cursee.unlocked_typing.platform.Services;
 import net.minecraft.SharedConstants;

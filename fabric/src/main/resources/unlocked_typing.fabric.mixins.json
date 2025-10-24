@@ -5,10 +5,15 @@
   "refmap": "${mod_id}.refmap.json",
   "compatibilityLevel": "JAVA_17",
   "mixins": [
-    "FabricChatFormattingMixin",
-    "FabricSharedConstantsMixin"
+    "ChatFormattingMixin",
+    "SharedConstantsMixin"
   ],
-  "client": [],
+  "client": [
+    "AbstractSignEditScreenMixin",
+    "BookEditScreenMixin",
+    "MultiLineEditBoxMixin",
+    "ScreenMixin"
+  ],
   "server": [],
   "injectors": {
     "defaultRequire": 1

@@ -1,4 +1,4 @@
-package com.cursee.unlocked_typing.mixin;
+package com.cursee.unlocked_typing.mixinOLD;
 
 import java.util.regex.Pattern;
 import net.minecraft.ChatFormatting;

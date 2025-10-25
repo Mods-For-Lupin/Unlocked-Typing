@@ -8,7 +8,11 @@
     "FabricCharFormattingMixin",
     "FabricSharedConstantsMixin"
   ],
-  "client": [],
+  "client": [
+    "client.FabricAbstractSignEditScreenMixin",
+    "client.FabricBookEditScreenMixin",
+    "client.FabricScreenMixin"
+  ],
   "server": [],
   "injectors": {
     "defaultRequire": 1

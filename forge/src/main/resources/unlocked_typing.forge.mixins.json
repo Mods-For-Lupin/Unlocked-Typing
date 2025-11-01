@@ -8,7 +8,11 @@
     "ForgeChatFormattingMixin",
     "ForgeSharedConstantsMixin"
   ],
-  "client": [],
+  "client": [
+    "client.ForgeAbstractSignEditScreenMixin",
+    "client.ForgeBookEditScreenMixin",
+    "client.ForgeScreenMixin"
+  ],
   "server": [],
   "injectors": {
     "defaultRequire": 1

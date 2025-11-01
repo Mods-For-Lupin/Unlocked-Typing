@@ -9,7 +9,7 @@ import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 
 @Mixin(ChatFormatting.class)
-public class FabricCharFormattingMixin {
+public class FabricChatFormattingMixin {
 
   /// Used in replacement of {@link ChatFormatting}'s STRIP_FORMATTING_PATTERN, replacing codepoint 167 / `§` with an unused value, `9999`.
   @Unique

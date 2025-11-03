@@ -14,6 +14,7 @@ import net.minecraft.client.gui.screens.inventory.SignEditScreen;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.chat.Style;
 import net.minecraft.util.FormattedCharSequence;
+import net.minecraft.world.item.DyeColor;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Shadow;
 import org.spongepowered.asm.mixin.Unique;
@@ -89,7 +90,7 @@ public class ForgeScreenMixin {
         String helperRawText = Component.translatable("unlocked_typing.editableText").getString();
         if (!messages.isEmpty()) {
 
-          guiGraphics.drawString(font, FormattedCharSequence.forward(helperRawText, Style.EMPTY.withUnderlined(true)), x, y, 0xFFFFFFFF);
+          guiGraphics.drawString(font, FormattedCharSequence.forward(helperRawText, Style.EMPTY.withUnderlined(true)), x, y, DyeColor.WHITE.getTextColor());
 
           String[] splitMessages = messages.split(Character.toString((char) 10));
           List<String> finalMessages = new ArrayList<>();
@@ -130,8 +131,15 @@ public class ForgeScreenMixin {
         int origCalcX = i + 36 + (114 - l) / 2;
         int origCalcY = 50;
 
+
         origCalcX += UNLOCKED_TYPING$OFFSET;
 
+
+        String helperRawText = Component.translatable("unlocked_typing.editableText").getString(); // TODO
+        guiGraphics.drawString(font, FormattedCharSequence.forward(helperRawText, Style.EMPTY.withUnderlined(true)), origCalcX - l, origCalcY - 9, DyeColor.WHITE.getTextColor());
+
+
+        // fully rendered text
         guiGraphics.drawString(font, Component.literal(titleText), origCalcX, origCalcY + 36, 0xFFFFFFFF);
 
         String[] splitMessages = titleText.split(Character.toString((char) 10));
@@ -152,7 +160,8 @@ public class ForgeScreenMixin {
 
           FormattedCharSequence unstyledCharSequence = FormattedCharSequence.forward(message, Style.EMPTY);
 
-          guiGraphics.drawString(font, unstyledCharSequence, origCalcX, origCalcY + 11, 0xFFDDDDDD, false);
+          // unstyled raw text (split to multi-lines)
+          guiGraphics.drawString(font, unstyledCharSequence, origCalcX, y + 11 + y, 0xFFDDDDDD, false);
 //        guiGraphics.drawString(font, unstyledCharSequence, x, y - 27, 0xFFDDDDDD, false);
 
           y += 9;

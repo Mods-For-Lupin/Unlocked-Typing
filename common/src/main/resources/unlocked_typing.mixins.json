@@ -6,7 +6,12 @@
   "compatibilityLevel": "JAVA_18",
   "mixins": [],
   "client": [
-    "client.MinecraftMixin"
+    "client.MinecraftMixin",
+
+    "client._BookEditScreenAccessorMixin",
+    "client._DisplayCacheAccessorMixin",
+    "client._LineInfoAccessorMixin",
+    "client._ScreenAccessorMixin"
   ],
   "server": [],
   "injectors": {

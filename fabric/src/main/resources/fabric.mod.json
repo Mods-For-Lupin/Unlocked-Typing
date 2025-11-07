@@ -17,6 +17,9 @@
   "entrypoints": {
     "main": [
       "com.cursee.unlocked_typing.UnlockedTypingFabric"
+    ],
+    "client": [
+      "com.cursee.unlocked_typing.UnlockedTypingClientFabric"
     ]
   },
   "mixins": [

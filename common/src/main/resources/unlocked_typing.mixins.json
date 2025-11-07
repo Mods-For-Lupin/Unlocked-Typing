@@ -4,14 +4,20 @@
   "package": "com.cursee.unlocked_typing.mixin",
   "refmap": "${mod_id}.refmap.json",
   "compatibilityLevel": "JAVA_18",
-  "mixins": [],
+  "mixins": [
+    "ChatFormattingMixin",
+    "StringUtilMixin"
+  ],
   "client": [
     "client.MinecraftMixin",
 
     "client._BookEditScreenAccessorMixin",
     "client._DisplayCacheAccessorMixin",
     "client._LineInfoAccessorMixin",
-    "client._ScreenAccessorMixin"
+    "client._ScreenAccessorMixin",
+
+    "client.AbstractSignEditScreenMixin",
+    "client.BookEditScreenMixin"
   ],
   "server": [],
   "injectors": {

@@ -5,10 +5,14 @@
   "compatibilityLevel": "JAVA_21",
   "mixins": [],
   "client": [
-    "client.NeoForgeMinecraftMixin"
+    "client.NeoForgeMinecraftMixin",
+
+    "client.InDevNeoForgeBookEditScreenMixin",
+    "client.InProdNeoForgeBookEditScreenMixin"
   ],
   "server": [],
   "injectors": {
     "defaultRequire": 1
-  }
+  },
+  "plugin": "com.cursee.unlocked_typing.UnlockedTypingNeoForgeMixinConfig"
 }

@@ -9,7 +9,7 @@ import org.spongepowered.asm.mixin.injection.ModifyConstant;
 public class InProdNeoForgeBookEditScreenMixin {
 
   @SuppressWarnings("all")
-  @ModifyConstant(method = "m_98169_", constant = @Constant(intValue = 16))
+  @ModifyConstant(method = "lambda$new$3", constant = @Constant(intValue = 16))
   private static int unlocked_typing$method_27593$titleLengthVerification(int constant) {
     return 30;
   }

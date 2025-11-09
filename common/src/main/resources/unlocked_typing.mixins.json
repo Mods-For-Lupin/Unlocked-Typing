@@ -17,6 +17,7 @@
     "client._ScreenAccessorMixin",
 
     "client.AbstractSignEditScreenMixin",
+    "client.ScreenMixin",
     "client.BookEditScreenMixin"
   ],
   "server": [],

@@ -20,6 +20,8 @@ public class ForgeChatFormattingMixin {
 //    if (text.contains("§")) {
 //      cir.setReturnValue(UNLOCKED_TYPING$STRIP_FORMATTING_PATTERN.matcher(text).replaceAll(""));
 //    }
-    cir.setReturnValue(UNLOCKED_TYPING$STRIP_FORMATTING_PATTERN.matcher(text).replaceAll(""));
+    if (text != null) {
+      cir.setReturnValue(UNLOCKED_TYPING$STRIP_FORMATTING_PATTERN.matcher(text).replaceAll(""));
+    }
   }
 }

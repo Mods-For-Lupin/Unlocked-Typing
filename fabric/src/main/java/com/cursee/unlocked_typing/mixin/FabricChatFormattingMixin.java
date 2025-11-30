@@ -18,6 +18,8 @@ public class FabricChatFormattingMixin {
   /// @reason Replaces Minecraft's internal regex for formatting strings with a custom regex pattern allowing codepoint 167 / `§`.
   @Inject(at = @At("TAIL"), method = "stripFormatting", cancellable = true)
   private static void unlocked_typing$stripFormatting(String text, CallbackInfoReturnable<String> cir) {
-    cir.setReturnValue(UNLOCKED_TYPING$STRIP_FORMATTING_PATTERN.matcher(text).replaceAll(""));
+    if (text != null) {
+      cir.setReturnValue(UNLOCKED_TYPING$STRIP_FORMATTING_PATTERN.matcher(text).replaceAll(""));
+    }
   }
 }

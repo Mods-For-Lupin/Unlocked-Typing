@@ -53,6 +53,9 @@ repositories {
             includeGroup "maven.modrinth"
         }
     }
+    maven {
+        url "https://cursemaven.com"
+    }
 }
 
 // Declare capabilities on the outgoing configurations.

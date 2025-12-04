@@ -1,7 +1,7 @@
-package com.example.examplemod.platform;
+package com.cursee.unlocked_typing.platform;
 
-import com.example.examplemod.Constants;
-import com.example.examplemod.platform.services.IPlatformHelper;
+import com.cursee.unlocked_typing.Constants;
+import com.cursee.unlocked_typing.platform.services.IPlatformHelper;
 
 import java.util.ServiceLoader;
 

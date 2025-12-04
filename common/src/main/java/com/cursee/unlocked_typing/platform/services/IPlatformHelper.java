@@ -1,4 +1,4 @@
-package com.example.examplemod.platform.services;
+package com.cursee.unlocked_typing.platform.services;
 
 public interface IPlatformHelper {
 

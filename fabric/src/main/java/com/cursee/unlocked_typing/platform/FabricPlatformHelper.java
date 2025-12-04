@@ -1,6 +1,6 @@
-package com.example.examplemod.platform;
+package com.cursee.unlocked_typing.platform;
 
-import com.example.examplemod.platform.services.IPlatformHelper;
+import com.cursee.unlocked_typing.platform.services.IPlatformHelper;
 import net.fabricmc.loader.api.FabricLoader;
 
 public class FabricPlatformHelper implements IPlatformHelper {

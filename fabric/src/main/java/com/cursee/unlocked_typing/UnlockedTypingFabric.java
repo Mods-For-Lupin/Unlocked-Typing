@@ -1,8 +1,8 @@
-package com.example.examplemod;
+package com.cursee.unlocked_typing;
 
 import net.fabricmc.api.ModInitializer;
 
-public class ExampleMod implements ModInitializer {
+public class UnlockedTypingFabric implements ModInitializer {
     
     @Override
     public void onInitialize() {
@@ -13,6 +13,6 @@ public class ExampleMod implements ModInitializer {
 
         // Use Fabric to bootstrap the Common mod.
         Constants.LOG.info("Hello Fabric world!");
-        CommonClass.init();
+        UnlockedTyping.init();
     }
 }

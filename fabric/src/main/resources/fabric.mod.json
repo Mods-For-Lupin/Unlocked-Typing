@@ -1,6 +1,6 @@
 {
     "schemaVersion": 1,
-    "id": "${mod_id}",
+    "id": "unlocked_typing",
     "version": "${version}",
     "name": "${mod_name}",
     "description": "${description}",

@@ -1,6 +1,6 @@
 package com.cursee.unlocked_typing.platform;
 
-import com.cursee.unlocked_typing.Constants;
+import com.cursee.unlocked_typing.UnlockedTyping;
 import com.cursee.unlocked_typing.platform.services.IPlatformHelper;
 import java.util.ServiceLoader;
 
@@ -20,10 +20,8 @@ public class Services {
   // example our file on Forge points to ForgePlatformHelper while Fabric points to FabricPlatformHelper.
   public static <T> T load(Class<T> clazz) {
 
-    final T loadedService = ServiceLoader.load(clazz)
-        .findFirst()
-        .orElseThrow(() -> new NullPointerException("Failed to load service for " + clazz.getName()));
-    Constants.LOG.debug("Loaded {} for service {}", loadedService, clazz);
+    final T loadedService = ServiceLoader.load(clazz).findFirst().orElseThrow(() -> new NullPointerException("Failed to load service for " + clazz.getName()));
+    UnlockedTyping.LOG.debug("Loaded {} for service {}", loadedService, clazz);
     return loadedService;
   }
 }

@@ -6,5 +6,6 @@ public class UnlockedTypingClientFabric implements ClientModInitializer {
 
   @Override
   public void onInitializeClient() {
+    UnlockedTypingClient.init();
   }
 }

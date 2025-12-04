@@ -7,5 +7,7 @@ public class Constants {
 
   public static final String MOD_ID = "unlocked_typing";
   public static final String MOD_NAME = "Unlocked Typing";
-  public static final Logger LOG = LoggerFactory.getLogger(MOD_NAME);
+
+  /// Used as a prefix for logging in Mixins before the logger for our mod {@link UnlockedTyping#LOG} is initialized.
+  public static final String PREFIX = '[' + MOD_NAME + ']' + ' ';
 }

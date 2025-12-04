@@ -5,13 +5,9 @@
   "refmap": "${mod_id}.refmap.json",
   "compatibilityLevel": "JAVA_17",
   "mixins": [
-    "ForgeChatFormattingMixin",
-    "ForgeSharedConstantsMixin"
   ],
   "client": [
-    "client.ForgeAbstractSignEditScreenMixin",
-    "client.ForgeBookEditScreenMixin",
-    "client.ForgeScreenMixin"
+    "ForgeMinecraftMixin"
   ],
   "server": [],
   "injectors": {

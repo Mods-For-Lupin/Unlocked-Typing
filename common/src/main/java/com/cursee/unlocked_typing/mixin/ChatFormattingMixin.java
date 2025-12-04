@@ -9,17 +9,15 @@ import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 
 @Mixin(ChatFormatting.class)
-public class ForgeChatFormattingMixin {
+public class ChatFormattingMixin {
 
-  /// Use an irrelevant keycode for ignoring `9999` instead of `167`/`§`
+  /// Used in replacement of {@link ChatFormatting}'s STRIP_FORMATTING_PATTERN, replacing codepoint 167 / `§` with an unused value, `9999`.
   @Unique
-  private static final Pattern UNLOCKED_TYPING$STRIP_FORMATTING_PATTERN = Pattern.compile("(?i)" + Character.toString((char) 9999) + "[0-9A-FK-OR]");
+  private static final Pattern UNLOCKED_TYPING$STRIP_FORMATTING_PATTERN = Pattern.compile("(?i)" + ((char) 9999) + "[0-9A-FK-OR]");
 
+  /// @reason Replaces Minecraft's internal regex for formatting strings with a custom regex pattern allowing codepoint 167 / `§`.
   @Inject(at = @At("TAIL"), method = "stripFormatting", cancellable = true)
   private static void unlocked_typing$stripFormatting(String text, CallbackInfoReturnable<String> cir) {
-//    if (text.contains("§")) {
-//      cir.setReturnValue(UNLOCKED_TYPING$STRIP_FORMATTING_PATTERN.matcher(text).replaceAll(""));
-//    }
     if (text != null) {
       cir.setReturnValue(UNLOCKED_TYPING$STRIP_FORMATTING_PATTERN.matcher(text).replaceAll(""));
     }

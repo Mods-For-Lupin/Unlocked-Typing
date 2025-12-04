@@ -1,10 +1,9 @@
-package com.cursee.unlocked_typing.impl.common.util;
+package com.cursee.unlocked_typing.api.client;
 
 import net.minecraft.client.gui.screens.inventory.BookEditScreen.DisplayCache;
 import net.minecraft.network.chat.Component;
-import net.minecraft.util.FormattedCharSequence;
 
-public interface IBookEditScreenAccessor {
+public interface BookEditScreenAccessor {
 
   String unlocked_typing$currentPageText();
 

@@ -9,9 +9,13 @@
     "StringUtilMixin"
   ],
   "client": [
-    "MinecraftMixin",
+    "client._BookEditScreenAccessorMixin",
+    "client._BookSignScreenAccessorMixin",
+    "client._MultiLineEditBoxAccessorMixin",
     "client._ScreenAccessorMixin",
     "client.AbstractSignEditScreenMixin",
+    "client.BookEditScreenMixin",
+    "client.BookSignScreenMixin",
     "client.MinecraftMixin",
     "client.ScreenMixin"
   ],

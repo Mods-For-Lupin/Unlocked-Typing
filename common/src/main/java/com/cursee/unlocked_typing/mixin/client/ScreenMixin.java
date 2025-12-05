@@ -1,13 +1,20 @@
 package com.cursee.unlocked_typing.mixin.client;
 
 import com.cursee.unlocked_typing.ConfiguredValues.ClientModConfig;
+import com.cursee.unlocked_typing.Constants;
 import com.cursee.unlocked_typing.impl.client.FormattingExamplesHelper;
+import com.cursee.unlocked_typing.platform.Services;
+import java.util.Locale;
 import net.minecraft.client.gui.Font;
 import net.minecraft.client.gui.GuiGraphics;
+import net.minecraft.client.gui.components.CycleButton.Builder;
+import net.minecraft.client.gui.components.Renderable;
+import net.minecraft.client.gui.components.events.GuiEventListener;
+import net.minecraft.client.gui.narration.NarratableEntry;
 import net.minecraft.client.gui.screens.Screen;
 import net.minecraft.client.gui.screens.inventory.AbstractSignEditScreen;
 import net.minecraft.client.gui.screens.inventory.BookEditScreen;
-import net.minecraft.client.gui.screens.inventory.SignEditScreen;
+import net.minecraft.network.chat.Component;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Shadow;
 import org.spongepowered.asm.mixin.injection.At;
@@ -22,6 +29,9 @@ public abstract class ScreenMixin {
 
 //  @Inject(at = @At("TAIL"), method = "render")
 //  private void unlocked_typing$render(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTick, CallbackInfo ci) {}
+
+  @Shadow
+  protected abstract <T extends GuiEventListener & Renderable & NarratableEntry> T addRenderableWidget(T widget);
 
   @Inject(at = @At("TAIL"), method = "render")
   private void unlocked_typing$render$renderHelperText(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTick, CallbackInfo ci) {

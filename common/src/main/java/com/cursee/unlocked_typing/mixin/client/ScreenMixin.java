@@ -5,6 +5,7 @@ import com.cursee.unlocked_typing.impl.client.FormattingExamplesHelper;
 import net.minecraft.client.gui.Font;
 import net.minecraft.client.gui.GuiGraphics;
 import net.minecraft.client.gui.screens.Screen;
+import net.minecraft.client.gui.screens.inventory.AbstractSignEditScreen;
 import net.minecraft.client.gui.screens.inventory.BookEditScreen;
 import net.minecraft.client.gui.screens.inventory.SignEditScreen;
 import org.spongepowered.asm.mixin.Mixin;
@@ -27,7 +28,7 @@ public abstract class ScreenMixin {
 
     Screen self = (Screen) (Object) this;
 
-    if (ClientModConfig.displayFormattingExamples && (self instanceof BookEditScreen || self instanceof SignEditScreen)) {
+    if (ClientModConfig.displayFormattingExamples && (self instanceof BookEditScreen || self instanceof AbstractSignEditScreen)) {
       FormattingExamplesHelper.renderFormattingExamples(guiGraphics, this.font);
     }
   }

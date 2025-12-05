@@ -30,10 +30,4 @@ public class ForgePlatformHelper implements IPlatformHelper {
 
     return FMLLoader.getGamePath();
   }
-
-  @Override
-  public String getGameDirectoryString() {
-
-    return getGameDirectory().toString();
-  }
 }

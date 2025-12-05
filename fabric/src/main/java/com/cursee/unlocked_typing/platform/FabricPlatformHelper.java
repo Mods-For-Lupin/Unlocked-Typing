@@ -28,10 +28,4 @@ public class FabricPlatformHelper implements IPlatformHelper {
 
     return FabricLoader.getInstance().getGameDir();
   }
-
-  @Override
-  public String getGameDirectoryString() {
-
-    return getGameDirectory().toString();
-  }
 }

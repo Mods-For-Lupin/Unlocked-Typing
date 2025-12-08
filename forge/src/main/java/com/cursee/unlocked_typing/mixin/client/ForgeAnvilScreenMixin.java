@@ -1,6 +1,5 @@
 package com.cursee.unlocked_typing.mixin.client;
 
-import com.cursee.unlocked_typing.ConfiguredValues.ClientModConfig;
 import com.cursee.unlocked_typing.Constants;
 import com.cursee.unlocked_typing.api.client.ScreenAccessor;
 import com.cursee.unlocked_typing.impl.client.ClipboardHelper;
@@ -10,9 +9,7 @@ import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.GuiGraphics;
 import net.minecraft.client.gui.components.PlainTextButton;
 import net.minecraft.client.gui.screens.Screen;
-import net.minecraft.client.gui.screens.inventory.AbstractSignEditScreen;
 import net.minecraft.client.gui.screens.inventory.AnvilScreen;
-import net.minecraft.client.gui.screens.inventory.BookEditScreen;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.chat.Style;
 import net.minecraft.util.Mth;
@@ -22,7 +19,7 @@ import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
 @Mixin(AnvilScreen.class)
-public class AnvilScreenMixin {
+public class ForgeAnvilScreenMixin {
 
   @Inject(at = @At("TAIL"), method = "subInit")
   private void unlocked_typing$init(CallbackInfo ci) {

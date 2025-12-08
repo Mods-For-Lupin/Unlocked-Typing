@@ -13,6 +13,7 @@ import net.minecraft.client.gui.components.events.GuiEventListener;
 import net.minecraft.client.gui.narration.NarratableEntry;
 import net.minecraft.client.gui.screens.Screen;
 import net.minecraft.client.gui.screens.inventory.AbstractSignEditScreen;
+import net.minecraft.client.gui.screens.inventory.AnvilScreen;
 import net.minecraft.client.gui.screens.inventory.BookEditScreen;
 import net.minecraft.network.chat.Component;
 import org.spongepowered.asm.mixin.Mixin;
@@ -38,7 +39,7 @@ public abstract class ScreenMixin {
 
     Screen self = (Screen) (Object) this;
 
-    if (ClientModConfig.displayFormattingExamples && (self instanceof BookEditScreen || self instanceof AbstractSignEditScreen)) {
+    if (ClientModConfig.displayFormattingExamples && (self instanceof BookEditScreen || self instanceof AbstractSignEditScreen || self instanceof AnvilScreen)) {
       FormattingExamplesHelper.renderFormattingExamples(guiGraphics, this.font);
     }
   }

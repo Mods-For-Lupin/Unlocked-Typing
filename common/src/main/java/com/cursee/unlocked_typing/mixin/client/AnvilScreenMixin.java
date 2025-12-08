@@ -35,7 +35,7 @@ public class AnvilScreenMixin {
     }
 
     if (self instanceof AnvilScreen) {
-      // screenAccessor.unlocked_typing$addRenderableWidget(ClientModConfig.configButton);
+      screenAccessor.unlocked_typing$addRenderableWidget(ClientModConfig.configButton);
       screenAccessor.unlocked_typing$addRenderableWidget(new PlainTextButton(80, 0, 80, 16, Component.literal("COPY SYMBOL").withStyle(Style.EMPTY), button -> ClipboardHelper.copyToClipboard("§"), Minecraft.getInstance().font) {
 
         @Override

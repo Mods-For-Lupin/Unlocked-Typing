@@ -1,5 +1,6 @@
 package com.cursee.unlocked_typing.mixin.client;
 
+import com.cursee.unlocked_typing.ConfiguredValues.ClientModConfig;
 import com.cursee.unlocked_typing.Constants;
 import com.cursee.unlocked_typing.api.client.ScreenAccessor;
 import com.cursee.unlocked_typing.impl.client.ClipboardHelper;
@@ -32,7 +33,7 @@ public class ForgeAnvilScreenMixin {
     }
 
     if (self instanceof AnvilScreen) {
-      // screenAccessor.unlocked_typing$addRenderableWidget(ClientModConfig.configButton);
+      screenAccessor.unlocked_typing$addRenderableWidget(ClientModConfig.configButton);
       screenAccessor.unlocked_typing$addRenderableWidget(new PlainTextButton(80, 0, 80, 16, Component.literal("COPY SYMBOL").withStyle(Style.EMPTY), button -> ClipboardHelper.copyToClipboard("§"), Minecraft.getInstance().font) {
 
         @Override

@@ -1,5 +1,0 @@
-accessWidener v1 named
-accessible class net/minecraft/client/gui/screens/inventory/BookEditScreen$DisplayCache
-accessible field net/minecraft/client/gui/screens/inventory/BookEditScreen$DisplayCache lines [Lnet/minecraft/client/gui/screens/inventory/BookEditScreen$LineInfo;
-accessible class net/minecraft/client/gui/screens/inventory/BookEditScreen$LineInfo
-accessible field net/minecraft/client/gui/screens/inventory/BookEditScreen$LineInfo x I

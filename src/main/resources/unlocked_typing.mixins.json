@@ -1,0 +1,25 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "com.cursee.unlocked_typing.mixin",
+  "refmap": "unlocked_typing.refmap.json",
+  "compatibilityLevel": "JAVA_21",
+  "mixins": [
+    "ChatFormattingMixin",
+    "StringUtilMixin",
+    "TitleScreenMixin"
+  ],
+  "client": [
+    "client._MultiLineEditBoxAccessorMixin",
+    "client._StringViewAccessorMixin",
+    "client.AbstractSignEditScreenMixin",
+    "client.BookEditScreenMixin",
+    "client.BookSignScreenMixin",
+    "client.MinecraftMixin",
+    "client.ScreenMixin"
+  ],
+  "server": [],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

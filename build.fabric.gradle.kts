@@ -25,9 +25,6 @@ platform {
 }
 
 loom {
-	mixin {
-		defaultRefmapName.set("unlocked_typing.refmap.json")
-	}
 	accessWidenerPath.set(rootProject.file("src/main/resources/unlocked_typing.accesswidener"))
 	runs.named("client") {
 		client()

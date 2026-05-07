@@ -1,36 +1,37 @@
 {
-  "schemaVersion": 1,
-  "id": "${id}",
-  "version": "${version}",
-  "name": "${name}",
-  "description": "${description}",
-  "authors": [
-    "${authors}"
-  ],
-  "contact": {
-    "homepage": "${homepage_url}",
-    "sources": "${sources_url}",
-    "issues": "${issues_url}"
-  },
-  "license": "${license}",
-  "environment": "*",
-  "entrypoints": {
-    "main": [
-      "com.cursee.unlocked_typing.UnlockedTyping"
+    "schemaVersion": 1,
+    "id": "${id}",
+    "version": "${version}",
+    "name": "${name}",
+    "description": "${description}",
+    "authors": [
+        "${authors}"
     ],
-    "client": [
-      "com.cursee.unlocked_typing.UnlockedTypingClient"
-    ]
-  },
-  "mixins": [
-    "unlocked_typing.mixins.json"
-  ],
-  "accessWidener": "unlocked_typing.accesswidener",
-  "depends": {
-    "fabric-api": ">=0.145.1+26.1",
-    "fabricloader": ">=0.18.5",
-    "fzzy_config": "*",
-    "java": ">=25",
-    "minecraft": ">=26.1"
-  }
+    "contact": {
+        "homepage": "${homepage_url}",
+        "sources": "${sources_url}",
+        "issues": "${issues_url}"
+    },
+    "icon": "icon.png",
+    "license": "${license}",
+    "environment": "*",
+    "entrypoints": {
+        "main": [
+            "com.cursee.unlocked_typing.UnlockedTyping"
+        ],
+        "client": [
+            "com.cursee.unlocked_typing.UnlockedTypingClient"
+        ]
+    },
+    "mixins": [
+        "unlocked_typing.mixins.json"
+    ],
+    "accessWidener": "unlocked_typing.accesswidener",
+    "depends": {
+        "fabric-api": ">=0.145.1+26.1",
+        "fabricloader": ">=0.18.5",
+        "fzzy_config": "*",
+        "java": ">=25",
+        "minecraft": ">=26.1"
+    }
 }

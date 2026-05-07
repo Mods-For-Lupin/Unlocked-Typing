@@ -1,18 +1,19 @@
 {
   "schemaVersion": 1,
-  "id": "unlocked_typing",
-  "version": "1.22.0",
-  "name": "Unlocked Typing",
-  "description": "Unlock your typing potential in Minecraft!",
+  "id": "${id}",
+  "version": "${version}",
+  "name": "${name}",
+  "description": "${description}",
   "authors": [
-    "Cursee"
+    "${authors}"
   ],
   "contact": {
-    "homepage": "https://curseforge.com/minecraft/mc-mods/unlocked-typing",
-    "sources": "https://github.com/Cursee/Unlocked-Typing",
-    "issues": "https://github.com/Cursee/Unlocked-Typing/issues"
+    "homepage": "${homepage_url}",
+    "sources": "${sources_url}",
+    "issues": "${issues_url}"
   },
-  "license": "MIT",
+  "icon": "icon.png",
+  "license": "${license}",
   "environment": "*",
   "entrypoints": {
     "main": [
@@ -32,8 +33,5 @@
     "fzzy_config": "*",
     "java": ">=25",
     "minecraft": ">=26.1"
-  },
-  "recommends": {
-    "modmenu": "*"
   }
 }
